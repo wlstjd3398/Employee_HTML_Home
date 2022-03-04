@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도서 정보 목록</title>
+
+  <style>	* {
+		margin: 0;
+		padding: 0;
+	}
+	.bookInfo_wrapper {
+		width: 70%;
+		margin: 10px auto;
+	}
+	.bookImgInfo {
+		float: left;
+	}
+	.bookImgInfo img {
+		max-height: 300px;
+	}
+	.bookTextInfo p {
+		margin-bottom: 20px;
+	}
+	.bookTextInfo .bookTitle span:nth-child(1) {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.bookTextInfo .bookTitle span:nth-child(2) {
+		color: gray;
+	}
+	.bookTextInfo .bookAuthor {
+		font-size: 25px;
+		font-weight: lighter;
+	}
+	.bookTextInfo .bookPrice {
+		font-size: 25px;
+		font-weight: lighter;
+	}
+	.bookTextInfo .bookPrice span:nth-child(1) {
+		font-size: 35px;
+		font-weight: bold;
+	}
+	.bookTextInfo .bookPrice span:nth-child(2) {
+		color: blue;
+		font-weight: bolder;
+		border: 1px solid blue;
+		background: skyblue;
+		padding: 0 8px;
+	}</style>
+  
+</head>
+<body>
+  <!-- 도서 정보 -->
+  <section class="bookInfo_wrapper">
+    <!-- 도서 이미지 -->
+    <section class="bookImgInfo">
+      <img src="images/book1.jpg" alt="도서1 이미지">
+    </section>
+    <!-- 도서 텍스트 정보 -->
+    <section class="bookTextInfo">
+      <!-- 도서 제목 -->
+      <!-- p*3 치면 편하게 구현 -->
+      <p class="bookTitle">
+        <span>쉽게 배우는 JSP 웹프로그래밍</span>
+        <span>: 쉽게 배우자</span>
+      </p>
+      <!-- 저자, 출판사, 출판일 -->
+      <p class="bookAuthor">
+        <span>송미영</span>
+        <span>한빛아카데미</span>
+        <span>2018년 10월</span>
+      </p>
+      <!-- 가격 -->
+      <p class="bookPrice">
+        <span>27000원</span>
+        <span>10% 할인</span>
+        <span>p 1150</span>
+      </p>
+    </section>
+  </section>
+
+</body>
+</html>

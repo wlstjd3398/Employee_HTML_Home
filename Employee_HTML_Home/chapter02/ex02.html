@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- method안쓰면 get으로 자동으로 입력되고 숨김 -->
+  <!-- method 종류는 get, post -->
+  <!-- get은 URL주소에 노출됨 -> 주의 ->post로 보내면 노출안됨 -->
+  <form action="test.jsp" method="post">
+  
+    <!-- id는 유일하게 구별할수있는 것, name은 입력란에 서버로 보낼때 ""안의 이름으로 보내겠다 -->
+    <label for="ID">아이디 :
+      <input type="text" id="ID" name="id" value="1" readonly>
+    </label><br>
+
+    <label for="PW">비밀번호 :
+      <input type="password" id="PW" name="pw" placeholder="비밀번호">
+    </label><br>
+
+    <label for="profile_image">프로필 이미지 :</label>
+
+      <input type="file" id="profile_image" name="profile_image"><br>
+
+      <!-- value 입력 요소의 기본값을 설정
+      autofocus 페이지 로드(페이지뜰때) 직후 해당 요소에 커서 위치
+      placeholder 입력 요소에 힌트 표시
+      readonly 입력 요소를 읽기 전용 요소로 변경
+      required 필수 입력요소로 지정
+      name 입력 요소의 이름 -->
+      <input type="submit" value="로그인">
+    
+  </form>
+</body>
+</html>

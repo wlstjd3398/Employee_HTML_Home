@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    p {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid black;
+    }
+
+    #notice_type {
+        width: 110px;
+    }
+#notice_title {
+        width: 240px;
+    }
+    #notice_content {
+        margin-top: 5px;
+        width: 100%;
+        resize: none;
+    }
+
+    p:last-child {
+        border: none;
+    }
+    p:last-child input {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+  <h1>공지사항</h1>
+  <form action=""></form>
+    <p>
+      <label for="notice_title">제목 </label>
+        <select name="type" id="notice_type">
+          <option value="important">긴급 공지사항</option>
+          <option value="regular">정기 공지사항</option>
+          <option value="notice" selected>안내 공지사항</option>
+        </select>
+
+        <input type="text" name="title" id="notice_title" required>
+    </p>
+    
+    <p>
+      <label for="notice_content">내용</label><br>
+      <textarea name="content" id="notice_content" cols="30" rows="10"></textarea>
+    </p>
+    
+    <p>
+      <label for="notice_file">첨부파일</label>
+      <input type="file">
+    </p>
+    
+    <p>
+      <label>게시 시점</label>
+      <input type="radio" name="time" value="now" checked>즉시
+      <input type="radio" name="time" value="1h">1시간 뒤
+      <input type="radio" name="time" value="2h">2시간 뒤
+      <input type="radio" name="time" value="..">기타..
+    </p>
+    
+    <p>
+      <label for="">열람 권한</label>
+      <input type="checkbox" name="accesslevel" id="levle1" checked>열심회원
+      <input type="checkbox" name="accesslevel" id="levle2" checked>꾸준회원
+    </p>
+    
+    <input type="submit" value="작성하기">
+    <input type="reset" value="다시쓰기">
+    
+</body>
+</html>
