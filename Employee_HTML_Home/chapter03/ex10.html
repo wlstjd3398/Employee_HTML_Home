@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .firstInline{
+      width: 500px;
+      display: block; /* 인라인 -> 블록 */
+    }
+
+    .block1{
+      display: inline-block; /* 한줄 전체 독식(인라인 -> 블록) */
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <!-- 인라인 레벨 태그는 너비, 높이, 여백이라는 개념이 없음 -->
+    <span class="firstInline">인라인1</span>
+    <span class="secondInline">인라인2</span>
+  </div>
+
+  <div>
+    <p class="block1">문단1</p>
+    <p class="block2">문단2</p>
+  </div>
+
+
+</body>
+</html>
