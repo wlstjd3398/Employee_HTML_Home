@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box1{
+      width:100px;
+      height:100px;
+      background:#ffd800;
+      display: inline-block;
+    }
+    #box2{
+      width:100px;
+      height:100px;
+      background:skyblue;
+
+      display: inline-block;
+      position:relative;
+
+      left:-30px;
+      top:0px;
+      /* 상하 중 하나, 좌우 중 하나 선택 */
+      /* right: ;*/
+      /* bottom: ;*/
+    }
+
+    #box3{
+      width:100px;
+      height:100px;
+      background:gray;
+      position:absolute;
+      top:5px;
+      left:5px;
+    }
+    #wrap{
+      position:relative;
+    }
+
+    body{
+      height:1000px;
+    }
+
+    #box4{
+      width:100px;
+      height:100px;
+      background:greenyellow;
+      position:fixed;
+      top:0;
+      left:0;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="box1">첫번째 div</div>
+  <div id="box2">두번째 div</div>
+  <div id="wrap">
+    <div id="box3">세번째 div</div>
+  </div>
+  <div id="box4">네번째 div</div>
+  
+
+
+</body>
+</html>
