@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red_txt {color:red;}
+    .blue_txt {color:blue;}
+  </style>
+</head>
+<body>
+  
+  <script>
+    // let count = 0;
+
+    document.write("<ul>");
+
+// 반복문(while, for)
+
+    // while(count< 10){
+    //   count++;
+      
+    //   document.write("<li>" + count + "</li>");
+    // }
+
+    for(let count=0; count<10; count++){
+      if(count % 2 ==0){
+        document.write("<li class=\"red_txt\">" + count + "</li>");
+      } else{
+        document.write("<li class=\"blue_txt\">" + count + "</li>");
+      }
+    }
+
+
+    document.write("</ul");
+
+  </script>
+
+</body>
+</html>

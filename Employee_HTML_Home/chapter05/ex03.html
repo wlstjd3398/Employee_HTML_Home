@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 1. 문자열(String)
+    // 2. 숫자형(Number)
+    // 3. 논리형(Boolean)
+    // 4. 빈 데이터(Undefined / null)
+
+    let data1 = "String1";
+    data1 = 'String2';
+    document.write(data1 + "<br>");
+
+    data1 = "<h1>heading1</h1>";
+    document.write(data1);
+
+    let data2 = 3;
+    data2 = 3.14;
+    data3 = Number("3");
+    document.write(data3 + "<br>");
+
+    let data;
+    console.log(data);
+
+    data = 10;
+    console.log(data);
+
+    data = undefined;
+    console.log(data);
+
+    data = true;
+    console.log(data);
+
+    let dataType = typeof data; // instanceof연산자와 비슷
+    console.log(dataType);
+
+    let num11 = 10;
+    let num22 = "10";
+    num11 === num22; // 나름 JS의 생각으로 동작하는게 아니라 자의적으로(사용자생각대로) 동작함 
+    
+    // === -> 이 연산자는 두 값을 비교하는데 두 값이 같고 데이터 타입까지 모두 같을 경우에만 true
+
+    // !== -> 이 연산자는 두 값을 비교하는데 두 값이 다르고 데이터 타입까지 모두 다를 경우에만 true
+
+  </script>
+</body>
+</html>
