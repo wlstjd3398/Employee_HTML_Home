@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  chapter4_2_34p
+
+  1. 사용자에게 이메일주소를 입력 받아 올바른 이메일인지 확인
+  이메일 @기호를 포함해야함, co.kr 또는 com 또는 
+  net 또는 or.kr 또는 go.kr로 끝나야함
+  <script>
+    let email = prompt("당신의 이메일주소는?");
+    let urlList = ["co.kr", "com", "net", "or.kr", "go.kr"];
+
+    let check1 = false;
+    let check2 = false;
+
+    check1 = email.indexOf("@") > 0;
+
+    for(let i=0; i<urlList.length; i++){
+      let url = urlList[i];
+
+      if(email.lastIndexOf(url) > 0){
+        check2 = true;
+        break;
+      }
+    }
+
+    if(check1 && check2){
+      console.log("올바른 형식의 이메일입니다.")
+    }else{
+      console.log("잘못된 형식의 이메일입니다.")
+    }
+  </script>
+
+</body>
+</html>

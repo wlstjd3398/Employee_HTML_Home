@@ -10,11 +10,21 @@
   
 <script>
   let dateObj = new Date();
-  dateObj.setTime(1648771200000); // 22년 4월 1일 0시 0분 0초
+  dateObj.setTime(1648771200000); // 22년 4월 1일 9시 0분 0초
   // 유닉스 타임스탬프 epochconverter사이트에서 값을 가져올수있음
   console.log(dateObj.toLocaleString());
   // 왜 9시? -> 과제(ex03.html)와 연관됨
 
+  // 1시간 -> 1000 * 60 * 60
+  // 9시간 -> 1시간 * 9 
+  let offset = 1000*60*60*9;
+  let millis = 1648771200000 - offset;
+  dateObj.setTime(millis);
+  console.log(dateObj.toLocaleString());
+  // console.log(millis.toLocaleString());
+// 타임오프셋 의미자체가 UTC기준시간보다 9시간빠르다는 의미로 빼줘야함
+  // 타임존 : 동일한 로컬 시간을 따르는 지역
+  // (국가나 지역들마다 자신들이 사용하는 타임존에 대한 고유이름부여)
 </script>
 
 </body>

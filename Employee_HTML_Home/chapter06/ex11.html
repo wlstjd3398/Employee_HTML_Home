@@ -7,11 +7,19 @@
   <title>Document</title>
 </head>
 <body>
-  
+  chapter4_2_32p 
+  1. 사용자로부터 영문이름 입력 받아 모두 대문자로 변환해 출력
+  2. 사용자로부터 연락처를 입력 받아 마지막 네자리는 *가려서 화면출력
+
+
   <script>
-    
+    let miniName = prompt("소문자 영문이름은?");
+    let upperName = miniName.toUpperCase();
+    console.log(miniName + " -> "+ upperName);
 
-
+    let phoneNumber = prompt("당신의 연락처는?");
+    let hideNumber = phoneNumber.substring(0, phoneNumber.length-4) + "****";
+    console.log(phoneNumber + " -> " + hideNumber);
   </script>
 
 </body>
