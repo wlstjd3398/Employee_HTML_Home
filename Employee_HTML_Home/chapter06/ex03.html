@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  // 오늘부터 연말까지 남은 일수를 계산해주는 웹사이트
+  let today = new Date();
+  let nowMonth = today.getMonth(); // 2로 나오지만 3으로 알고있어야함
+  // 월은 -1 되어 표시됨 (0 ~ 11까지 표시됨)
+  let nowDate = today.getDate(); // 일 정보 
+  let nowDay = today.getDay(); // 요일 정보
+  let nowYear = today.getFullYear(); // 년 정보
+
+  let endDay = new Date(nowYear, 11, 31); // 12월은 표시하기위해 11 표시
+  endDay.getTime();
+  // today.getTime(); -> 오늘날짜정보를 초로 보여줌
+  // getTime 메서드가 return 하는 건 유닉스 타임 스탬프(1/1000 밀리초로 나옴)로 표기된 초
+  // unix 개발된시점을 0초를 기준으로 만들어낸 시간
+  // 사용 이유 -> 나라 마다 또는 지역 마다 시간이 다르니까 현재라는 시간을 활용하기 위해
+  // 과제!! 타임오프셋, 타임존을 찾아보고 숙지해야함
+  
+  let diffDate = endDay.getTime() - today.getTime();
+// 하루 24시간
+// 1시간 -> 60분
+// 1분 -> 60초
+// 24*60*60 하루 초는 86400초
+// diffDate 연말에서 현재를 뺀 초를 하루초인 86400 *1000(밀리초->초)으로 나누면
+  let result = Math.ceil(diffDate / (24*60*60*1000));
+  console.log(result); // 294.xxxxxx 나옴 -> 내장객체 Math.ceil(올림적용)
+
+  document.write("연말까지 약 ");
+  document.write("<span style=\"color: blue;\">" + result + "</span>");
+  document.write("일 남았습니다.")
+  </script>
+
+</body>
+</html>

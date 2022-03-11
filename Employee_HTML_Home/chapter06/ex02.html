@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  let today = new Date();
+  let nowMonth = today.getMonth(); // 2로 나오지만 3으로 알고있어야함
+  // 월은 -1 되어 표시됨 (0 ~ 11까지 표시됨)
+  let nowDate = today.getDate(); // 일 정보 
+  let nowDay = today.getDay(); // 요일 정보
+
+  document.write("<h1>오늘 날짜 정보</h1>");
+  document.write("<p>현재 월 : " + nowMonth + "</p>"); 
+  document.write("<p>현재 일 : " + nowDate + "</p>");
+  document.write("<p>현재 요일 : " + nowDay + "</p>");
+
+  let olympics = new Date(2021, 6, 23);
+  // 7월 날짜정보를 만들어서 6월로 표시됨
+  let olympicsMonth = olympics.getMonth();
+  let olympicsDate = olympics.getDate();
+  let olympicsDay = olympics.getDay();
+
+  document.write("<h1>2020 도쿄 올림픽 날짜 정보</h1>");
+  document.write("<p>도쿄 올림픽 월 : " + olympicsMonth + "</p>");
+  document.write("<p>도쿄 올림픽 일 : " + olympicsDate + "</p>");
+  document.write("<p>도쿄 올림픽 요일 : " + olympicsDay + "</p>");
+
+</script>
+
+</body>
+</html>

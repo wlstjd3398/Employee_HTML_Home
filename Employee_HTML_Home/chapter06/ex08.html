@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    // 수정해보기
+
+    let line1 = ["서면", "부전", "양정", "시청"];
+    console.log(line1);
+    console.log("= = = = =");
+
+    let result = line1.join("-"); // 서면-부전-양정-시청 으로 합쳐줌
+    console.log(result);
+    console.log("= = = = =");
+
+    let line2 = ["사상", "감전", "주례"];
+    result = line1.concat(line2); // concat합치다라는 뜻으로 두 배열을 합쳐줌
+    // ["서면", "부전", "양정", "시청"] + ["사상", "감전", "주례"]
+    // ["서면", "부전", "양정", "시청", "사상", "감전", "주례"]
+    console.log(result);
+    console.log("= = = = =");
+
+    result = line1.slice(1, 3); // slice자르다 인덱스번호두개(시작이상, 마지막미만)
+    console.log(result); // 부전1번인덱스, 양정2번인덱스 를 복사해서 새로운 배열을 만들어줌
+    console.log("= = = = =");
+
+    // clone = line1.slice(0, line1.length); // 복사 (시작이상, 마지막미만)
+
+    line1.sort(); // 정렬 - 오름차순 산을 올라간다 - 내림차순 산을 내려간다
+    console.log(line1);
+    console.log("= = = = =");
+
+    line1.reverse(); // 현재 데이터의 순서를 뒤바꿈
+    console.log(line1);
+    console.log("= = = = =");
+
+  </script>
+
+</body>
+</html>
