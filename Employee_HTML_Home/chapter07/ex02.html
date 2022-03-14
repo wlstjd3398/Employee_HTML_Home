@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  let name = prompt("이름 입력");
+  let age = prompt("나이 입력");
+  
+  name = encodeURIComponent(name);
+
+  let data = "name=" + name + "&age=" + age;
+  let serverURL = "next.html?"+ data;
+
+  // next.html?name=김진성&age=27;
+  document.write("<a href=\""+serverURL+ "\">다음페이지로 이동</a>");
+
+
+//클라이언트가 됨
+
+</script>
+
+</body>
+</html>

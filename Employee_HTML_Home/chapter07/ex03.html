@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"여기를 클릭하세요" 버튼을 클릭했을때(이벤트처리기를 등록해줘야함)
+    alert로 "클릭!"을 출력하는 컨텐츠</title>
+</head>
+<style>
+  div{
+    margin-top:10px;
+  }
+  div.bg{
+    background:burlywood;
+    width:300px;
+    height:300px;
+  }
+
+</style>
+<body>
+  <button onclick="clickBtn()">여기를 클릭하세요</button>
+  <div class="bg" onmouseover="inDiv()" onmouseout="outDiv()"></div>
+<script>
+  function clickBtn(){
+    alert("클릭!");
+  }
+
+  function inDiv(){
+    alert("마우스 올림");
+  }
+
+  function outDiv(){
+    alert("마우스 나감");
+  }
+
+</script>
+
+</body>
+</html>

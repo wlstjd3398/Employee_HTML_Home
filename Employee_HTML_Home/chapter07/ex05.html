@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<h1>선호하는 음식</h1>
+<section id="food_1">
+  <h2>한식</h2>
+  <ul>
+    <li class="first">김치</li>
+    <li>불고기</li>
+  </ul>
+</section>
+
+<section id="food_2">
+  <h2>양식</h2>
+  <ul>
+    <li class="first">피자</li>
+    <li>파스타</li>
+  </ul>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+  let $all = $("*"); // 이 페이지에 있는 모든 태그를 $all(jquery가 있다를 표시해줌)에 저장
+
+  console.log($all);
+
+// 태그들이 들어있는 배열 $all
+  let $li = $all.eq(11);
+  $li.text("비빔밥");
+  $li.css("color", "blue");
+
+  let $h2 = $("h2");
+  $h2.css("color", "orange");
+
+  let $firstFood = $(".first");
+  $firstFood.css("font-size", "25px");
+
+  let $firstFoodSection = $("#food_1");
+  $firstFoodSection.css("background", "purple").css("padding", "10px"); // 메서드체이닝방식으로 메서드를 엮어서 계속 반복적으로 호출
+</script>
+
+</body>
+</html>

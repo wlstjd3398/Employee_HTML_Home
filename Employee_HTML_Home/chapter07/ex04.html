@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="clickPrinter">0회 클릭했습니다.</h1>
+  <button onclick="clickBtn()">클릭!</button>
+  
+  <!-- 제이쿼리는 자바스크립트를 도와주니 script로 추가, ../ 바로위 폴더 -->
+  <!-- <script src="../JS/jquery-3.6.0.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+    // 클릭! 버튼을 클릭했을때
+    // h1 태그에 클릭 횟수를 알려주는 페이지
+
+    // 이벤트결과 만들고 결과를 연결해줌
+    let count = 0; // 클릭횟수를 세는 변수 선언
+    function clickBtn(){
+      count++;
+
+      //제이쿼리로 불러오는것(선택자 필수)
+      let h1Tag = $("#clickPrinter");
+      h1Tag.text(count + " 번 클릭했습니다.");
+
+      // getElement로 html을 javascript으로 불러올수있음
+      // let h1Tag = document.getElementById("clickPrinter");
+      // h1Tag.innerText = count + " 번 클릭했습니다.";
+
+      // document.getElementsByTagName("h1")[0];
+      // console.log(count + " 번 클릭했습니다.");
+    }
+
+  // 자바스크립트로 이렇게 불러오면 조금 번거로움 -> 제이쿼리를 이용해서 사용하면 편리함
+  </script>
+
+</body>
+</html>

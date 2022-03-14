@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function 함수이름(매개변수){
+    //   소스코드
+    // }
+
+    //즉시실행함수(선언과 동시에 사용)
+    (function(){
+      document.write("<h1>안녕하세요!</h1>");
+      document.write("<h1>방문하신걸 환영합니다!</h1>");
+    }()); // () 호출
+
+    //익명함수
+    // 대입 연산자의 오른쪽은 값이 와야하는데 함수가 왔음
+    // 단, 함수를 값처럼 다루려면 
+    // 함수를 선언할 때 이름을 뺴야함
+    let func1 = function(){
+      document.write("<h1>안녕하세요!</h1>");
+      document.write("<h1>방문하신걸 환영합니다!</h1>");
+    }
+    func1();
+    // 이름이 없는 함수라 
+    // 익명 함수라고 부름
+
+    // 익명 함수를 선언할 때 특징은 
+    // 세미콜론으로 끝나지 않는다는 점
+
+    // 본질은 함수이고 함수를 선언하는 코드이므로 
+    // 세미콜론이 없음
+
+    //함수를 중복해서 선언가능->가장마지막에 선언한함수 호출됨
+    function printWelcomeMessage(){
+      document.write("<h1>안녕하세요!</h1>");
+      document.write("<h1>방문하신걸 환영합니다!</h1>");
+    }
+
+    function printWelcomeMessage(){
+      document.write("<h1>안녕하세요!</h1>");
+      document.write("<h1>방문하신걸 환영합니다!</h1>");
+    }
+
+    printWelcomeMessage();
+
+    // 코드 블록안 변수선언하면 지역변수
+    // 코드 블록밖 변수선언하면 전역변수
+    
+  </script>
+
+
+</body>
+</html>
