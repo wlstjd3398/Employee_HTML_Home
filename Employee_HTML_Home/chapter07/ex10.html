@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>헤더(머릿글)</h1>
+  </header>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+    for(let i=0; i<300000000; i++){
+
+    }
+    //브라우저가 웹 페이지를 다 읽으면 웹페이지에 load 이벤트가 발생
+    // java가 window라는 내장객체를 $화 해주고 load이벤트 처리함
+    $(window).on("load", function(){
+      console.log("페이지 로딩 완료");
+    });
+  </script>
+
+  <footer>
+    <h1>푸터(바닥글)</h1>
+  </footer>
+
+</body>
+</html>

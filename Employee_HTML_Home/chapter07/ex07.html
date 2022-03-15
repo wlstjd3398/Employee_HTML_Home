@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>탐색 선택자</h1>
+  <ul id="menu">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    <li>내용5</li>
+  </ul>
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+
+    // 불러온 li 태그들 중에서 첫번째 태그와 마지막 태그의 글씨 크기를 30px로 설정해라
+    let $liList = $("li"); // html태그를 jquery로 불러온것(jquery 메서드를 불러올수있음)
+
+    console.log($liList);
+
+    console.log("불러온 태그의 수 = " + $liList);
+
+    // let firstLi = $liList[0];
+    // jquery로 접근하는게 아니라 javascript로 불러와서 jquery쓸수없음
+    // 아래문단처럼 eq를 써야 jquery로 불러올수있게함
+    // firstLi.style.fountSize = "25px"; // javascript로 속성을 주려면 복잡해서 jquery로 불러옴
+
+    let $firstLi = $liList.eq(0);
+    // jquery로 불러온 첫 번째 li 태그의 글씨 크기를 25px로 설정
+    $firstLi.css("font-size", "30px");
+    
+    let $lastLi = $liList.eq($liList.length-1);
+    $lastLi.css("font-size", "30px");
+
+    //불러온 li 태그들에 글씨색을 차례대로 빨주노초파 색으로 css 주세요
+    let colorList = ["red", "orange", "yellow", "green", "blue"];
+
+    for(let i=0; i<$liList.length; i++){
+      let $nthLI = $liList.eq(i);
+      $nthLI.css("color", colorList[i]);
+    }
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div><img src="" alt=""></div>
+  <!-- 각 버튼을 눌렀을 때 버튼에 맞는 이미지를 보여주는 페이지 -->
+  <button type = "button" onclick="show(1)">가위로 바꾸기</button>
+  <button type = "button" onclick="show(2)">바위로 바꾸기</button>
+  <button type = "button" onclick="show(3)">보로 바꾸기</button>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+    // 하나의 함수에 if 조건문으로 감싸서 출력하는 경우도 있음
+    function show(buttonType){
+      if(buttonType==1){
+        //img 태그에 가위 이미지를 출력
+        let $img = $("img");
+        $img.attr("src", "./img/game_1.png");
+      }else if(buttonType==2){
+        //img 태그에 바위 이미지를 출력
+        let $img = $("img");
+        $img.attr("src", "./img/game_2.png");
+      }else if(buttonType==3){
+        //img 태그에 보 이미지를 출력
+        let $img = $("img");
+        $img.attr("src", "./img/game_3.png");
+      }
+    }
+
+    // 각 함수로 출력하는
+    // function showScissors(){
+    //     // img 태그에 가위 이미지를 출력
+    //     let $img= $("img");
+    //     $img.attr("src", "./img/game_1.png");
+    // }
+
+    // function showRock(){
+    //     // img 태그에 바위 이미지를 출력
+    //     let $img= $("img");
+    //     $img.attr("src", "./img/game_2.png");
+    // }
+
+    // function showPaper(){
+    //     // img 태그에 보 이미지를 출력
+    //     let $img= $("img");
+    //     $img.attr("src", "./img/game_3.png");
+    // }
+  </script>
+  
+</body>
+</html>

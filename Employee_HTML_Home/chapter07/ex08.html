@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.내가 가장 좋아하는 메뉴(id가 myBest) 글씨색을 빨간색으로 설정해라
+
+    2.아이디가 turnOnOff인 버튼 태그를 클릭할 때마다 비빔밥 메뉴가 보이거나 보이지 않습니다
+    버튼 태그를 클릭했을때
+    비빔밥 메뉴가 보이지 않으면 보이도록하고 그와 동시에 버튼태그의 텍스트를 보이지않기로 설정하고
+    비빔밥 메뉴가 보인다면 보이지 않도록하고 그와 동시에 버튼 태그의 텍스트를 보이기로 설정해라</title>
+</head>
+<style>
+  #hide{
+    display: none;
+  }
+</style>
+<body>
+  <h1>내가 좋아하는 메뉴들</h1>
+  <ul>
+    <li>김치찌개</li>
+    <li>된장찌개</li>
+    <li id="myBest">김치</li>
+    <li id="hide">비빔밥</li>
+    <li>제육볶음</li>
+  </ul>
+
+  <div>
+    <button type="button" id="turnOnOff" onclick="turnOnOff()">보이기</button>
+  </div>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+    // let $myBest = $("#myBest");
+    // $myBest.css("color", "red");
+
+    // find 메서드
+    let $ul = $("ul");
+    let $myBest = $ul.find("#myBest");
+    $myBest.css("color", "red");
+
+    //display: none으로 되어있는 hide id를 불러오기
+    // let $hide = $("#hide");
+    // if($hide.is(":hidden")){
+    //   console.log("보이지 않습니다.");
+    // }
+    //is 메서드 상태를 나타냄 -> 필수 체크박스에 체크에 되어있는지 판별가능
+
+      function turnOnOff() {
+        let $hide = $("#hide");
+
+        if($hide.is(":hidden")){
+          $hide.css("display", "block");
+          $("#turnOnOff").text("보이지 않기");
+        }else{
+          $hide.css("display", "none");
+          $("#turnOnOff").text("보이기");
+        }
+      }
+      //text메서드는 ("???")로 채워라
+
+  </script>
+</body>
+</html>
