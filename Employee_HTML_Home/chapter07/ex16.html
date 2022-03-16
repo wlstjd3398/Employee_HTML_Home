@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red{
+        background: red;
+    }
+    .orange{
+        background: orange;
+    }
+    .yellow{
+        background: yellow;
+    }
+    .green{
+        background: green;
+    }
+    .blue{
+        background: blue;
+    }
+    .navy{
+        background: navy;
+    }
+    .purple{
+        background: purple;
+    }
+    
+    div {
+        margin-top:10px;
+        width:500px;
+        height:500px;
+    }
+</style>
+</head>
+<body>
+  <div class="red"></div>
+  <div class="orange"></div>
+  <div class="yellow"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="navy"></div>
+  <div class="purple"></div>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+    $(window).on("scroll", function(){
+        
+      //window 내장객체로 바꿈
+      let $window = $(window);
+      //스크롤의 현재위치를 실시간으로 알려줌
+      console.log($window.scrollTop());
+      //예제 따라해보기(chapter07 마지막ppt 중간쯤 내렸을때 무언가를 출력)
+      
+
+
+      //스크롤을 움직였을때 동작
+      // console.log("스크롤 움직임");
+
+    })
+  </script>   
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>이메일</legend>
+      
+      <input type="email" placeholder="이메일">
+      @
+      <input type="text" disabled>
+      <!-- disabled는 비활성화로 커서조차 반응없음
+      readonly는 활성화 되어있지만 입력못함 -->
+      <select>
+        <option value="naver.com" onclick="naver()">네이버</option>
+        <option value="google.com" onclick="google()">구글</option>
+        <option value="daum.net" onclick="daum()">다음</option>
+        <option value="" onclick="passive()">직접입력</option>
+      </select>
+
+    </fieldset>
+  </form>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+    let $select = $("select");
+    $select.on("change", function(){
+      // $(this) -> 현재 이벤트가 발생한 태그를 jquery로 불러오기 가능
+      let $target = $(this);
+      let value = $target.val();
+
+      // console.log(value);
+
+      if(value != ""){
+        $("input[type=text]").val(value);
+      }else{
+        //type이 text인 태그에 직접 도메인을 입력하도록 변경
+        $("input[type=text]").removeAttr("disabled");
+      }
+      //이 프로그램의 문제
+      // 1. 네이버, 구글, 다음 중 하나를 선택한 후 직접 입력을 선택하면 도메인이 들어있는 상태로 input 태그가 활성화됨
+      // 2. 직접 입력인 상태에서 마음이 바껴서 네이버, 구글, 다음 중 하나를 선택하면 활성화가 된 상태로 input 태그에 도메인이 채워짐
+      // 3. 이 페이지에 들어오자마자 select 태그에 네이버가 선택되어있는데 네이버 도메인이 채워져있지 않음
+      
+      // if(value == "naver.com"){
+      //     // type 이 text인 태그에 네이버 도메인 출력
+      //     $("input[type=text]").val("naver.com");
+      // }else if(value == "google.com"){
+      //     // type 이 text인 태그에 구글 도메인 출력
+      //     $("input[type=text]").val("google.com");
+      // }else if(value == "daum.net"){
+      //     // type 이 text인 태그에 다음 도메인 출력
+      //     $("input[type=text]").val("daum.net");
+      // }else{
+      //     // type 이 text인 태그에 직접 도메인 입력하도록 변경
+      //     // input 속성에 disabled를 없애면 직접 입력가능하게됨
+      //     $("input[type=text]").removeAttr("disabled");
+      // }
+
+    });
+
+    // 각 옵션을 클릭했을 때
+    // 그 옵션에 맞는 도메인이 type이 text인 태그에 출력되도록 하세요
+    // let $option = $("option");
+    // $options.on("click", function(){
+    //     // $(this) -> 현재 이벤트가 발생한 태그를 jquery로 불러오기 가능
+    //     let $nowClickOption = $("this");
+    //     let text = $nowClickOption.text();
+
+    //     if(text == "네이버"){
+    //         // type 이 text인 태그에 네이버 도메인 출력
+    //         $("input[type=text]").val("naver.com");
+    //     }else if(text == "구글"){
+    //         // type 이 text인 태그에 구글 도메인 출력
+    //         $("input[type=text]").val("google.com");
+    //     }else if(text == "다음"){
+    //         // type 이 text인 태그에 다음 도메인 출력
+    //         $("input[type=text]").val("daum.com");
+    //     }else{
+    //         // type 이 text인 태그에 직접 도메인 입력하도록 변경
+    //         // input 속성에 disabled를 없애면 직접 입력가능하게됨
+    //         $("input[type=text]").removeAttr("disabled");
+    //     }
+    // });
+// 약간의 괴리감이 있음 select때문에 보여지는 것이라 option태그로 이벤트를 설정해놓으면 적용안됨
+// javasript 오타나 컴파일오류나 애초에 잘못한경우 가 생길경우 개발자모드 console에 한줄씩 넣어보고 확인해봐라
+
+
+    //내방식(jquery사용안함 -> 번거로움)
+    // function naver(){
+    //     //네이버 텍스트 출력
+    //     let $naver = $("").
+    //     $naver.text();
+    // }
+
+    // function google(){
+    //     //구글 텍스트 출력
+
+    // }
+
+    // function daum(){
+    //     //다음 텍스트 출력
+
+    // }
+
+    // function passive(){
+    //     //직접입력 텍스트 출력
+
+    // }
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .red{
+    background: red;
+  }
+  .orange{
+    background: orange;
+  }
+  .yellow{
+    background: yellow;
+  }
+  .green{
+    background: green;
+  }
+  .blue{
+    background: blue;
+  }
+  .navy{
+    background: navy;
+  }
+  .purple{
+    background: purple;
+  }
+
+  .element{
+    margin-top:10px;
+    width:30px;
+    height:30px;
+  }
+
+</style>
+<body>
+  <!-- .wrapper + enter = 클래스 wrapper 생성됨 -->
+  <div class="wrapper">
+    <div class="buttons">
+      <button type="button" onclick="callBefore()">before</button>
+      <button type="button" onclick="callAfter()">after</button>
+      <button type="button" onclick="callAppend()">append</button>
+      <button type="button" onclick="callPrepend()">prepend</button>
+    </div>
+  </div>
+  <div class="append"></div>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+    let index=0;
+    let colorList=["red","orange", "yellow", "green", "blue", "navy", "purple"];
+
+    function callBefore(){
+      let color = colorList[index++];
+
+      index = index % colorList.length;
+      
+      let $append = $(".append");
+      $append.before("<div class=\"element " + color +"\"></div>");
+
+    }
+
+    function callAfter(){
+      let color = colorList[index++];
+
+      index = index % colorList.length;
+
+      let $append = $(".append");
+      $append.after("<div class=\"element " + color +"\"></div>");
+    }
+
+    function callAppend(){
+      let color = colorList[index++];
+
+      index = index % colorList.length;
+
+      let $append = $(".append");
+      $append.append("<div class=\"element " + color +"\"></div>");
+    }
+
+    function callPrepend(){
+      let color = colorList[index++];
+
+      index = index % colorList.length;
+
+      let $append = $(".append");
+      $append.prepend("<div class=\"element " + color +"\"></div>");
+    }
+  </script>
+</body>
+</html>
