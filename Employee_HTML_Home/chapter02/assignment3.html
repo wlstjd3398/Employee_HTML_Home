@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <img src="https://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png" alt="쿠팡로고">
+  </header>
+
+  <main>
+    <h4>회원 정보를 입력해주세요</h4>
+
+    <form action="join" method="POST">
+      <section id="inputArea">
+        <input type="email" name="id" placeholder="아이디(이메일)"><br>
+        <input type="password" name="password1" placeholder="비밀번호"><br>
+        <input type="password" name="password2" placeholder="비밀번호 확인"><br>
+        <input type="text" name="이름" placeholder="이름"><br>
+        <input type="tel" name="tel" placeholder="휴대폰 번호" placeholder="휴대폰 번호"><br>
+      </section>
+      <hr>
+      
+    <section id="allCheck">
+      <h4>쿠팡 서비스약관에 동의해주세요</h4>
+      <input type="checkbox" id="allAgree"><br>
+      <label for="">모두 동의합니다.</label>
+    </section>
+
+      <p>동의에는 필수 및 선택 목적(광고성 정보 수신 포함) 에 대한 도으이가 포함되어 있으며, 선택 목적의 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.</p>
+    
+    <div>
+      <input type="checkbox" name="requered1"><label for="">[필수] 만 14세 이상입니다.</label><br>
+      <input type="checkbox" name="requered2"><label for="">[필수] 쿠팡 이용약관 동의</label><br>
+      <input type="checkbox" name="requered3"><label for="">[필수] 전자 금융거래 이용약관 동의</label><br>
+      <input type="checkbox" name="requered4"><label for="">[필수] 개인정보 수집 및 이용 동의</label><br>
+      <input type="checkbox" name="requered5"><label for="">[필수] 개인정보 제3자 제공 동의</label><br>
+      <input type="checkbox" name="requered6"><label for="">[선택] 마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의</label><br>
+      <input type="checkbox" name="requered6"><label for="">[선택] 광고성 정보 수신 동의</label><br>
+      <input type="checkbox" name="requered6"><label for="">[선택] 이메일 수신동의</label><br>
+      <input type="checkbox" name="requered6"><label for="">[선택] SMS, MMS 수신 동의</label><br>
+      <input type="checkbox" name="requered6"><label for="">[선택] 앱 푸시 수신 동의</label><br>
+    </div>
+
+      <input type="submit" value="동의하고 가입하기">
+    </form>
+  </main>
+
+  <footer>
+    <div id="footerText">@Coupang Corp. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

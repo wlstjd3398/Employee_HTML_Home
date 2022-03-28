@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 개인블로그 양식</title>
+  <style>
+    body{
+      width:400px;
+      height:400px;
+      display: inline-block;
+    }
+    header{
+      width:100px;
+      height:100px;
+      display: inline;
+    }
+    header > div{
+      
+      border: 1px solid black;
+    }
+
+    section{
+      width:100px;
+      height:300px;
+      display: inline;
+    }
+    section > div{
+      
+      border: 1px solid black;
+    }
+    section > .sec1{
+      height: 300px;
+    }
+
+    footer{
+      width:100px;
+      height:100px;
+      display: inline;
+    }
+    footer > div{
+      border: 1px solid black;
+    }
+
+    article{
+      display: inline;
+      position: absolute;
+      top:50px;
+      left:410px;
+
+    }
+    article > div{
+      width:150px;
+      display: block;
+      border: 1px solid black;
+    }
+    article > div > img {
+      background-image: cover;
+    }
+
+  </style>
+</head>
+<body>
+
+  <form action="naverMyBlog.html">
+    <header>
+      <div>
+        <span>
+          <a href="" name="otherBlog">이웃블로그</a>
+        </span>
+        <span>
+          <a href="" name="blogHome">블로그 홈</a>
+        </span>
+        <span>
+          <a href="" name="myMenu">내 메뉴</a>
+        </span>
+        <span>
+          <a href="" name="mynick">자신의 별명</a>
+        </span>
+        <input type="button" name="allMenu">
+      </div>
+
+      <div>
+        <div>
+          <span>블로그</span>
+          <span>Game</span>
+        </div>
+      </div>
+    </header>
+
+
+    <section>
+      <div>
+        <span>list</span>
+      </div>
+      <div class="sec1">
+        <span class="title">제목</span>
+        <a href="edit.html">수정</a> | <a href="delete.html">삭제</a><br>
+        <textarea name="content1" id="content" cols="50" rows="18"></textarea>
+      </div>
+
+    </section>
+
+    <article>
+      <div>
+        <img src="https://blogpfthumb-phinf.pstatic.net/MjAyMDEyMTFfMjI5/MDAxNjA3Njk0NzM1MzI0.sGVIl1n7MlEZgd-ApKCA86BtDtQ33QIVtK3Awq2K8PAg._I1-j5DysF_hXjLoY-SMfmaaEcEXWVuLVn1EsTzeKowg.GIF.wlstjd3398/profileImage.gif?type=w161" alt="프로필사진">
+        <span>이름</span>
+        <textarea name="introduce1" id="introduce" cols="18" rows="10">소개</textarea>
+      </div>
+
+      <hr>
+
+      <div>
+        <div class="category">카테고리</div>
+        <a href="postList.html">전체보기</a>
+      </div>
+    </article>
+
+
+    <footer>
+      <div>
+        <a href="categoryList.html">자바 웹개발 취업발 카테고리글</a>
+        <a href="listAll">전체글보기</a><br>
+        <hr>
+        <a href="list5.html">5번째 글</a>
+        <hr>
+        <a href="list4.html">4번째 글</a>
+        <hr>
+        <a href="list3.html">3번째 글</a>
+        <hr>
+        <a href="list2.html">2번째 글</a>
+        <hr>
+        <a href="list1.html">1번째 글</a>
+        <hr>
+        <a href="past.html">이전</a>&nbsp;&nbsp;<a href="next.html">다음</a>
+      </div>
+    </footer>
+  
+  </form>
+
+</body>
+</html>
