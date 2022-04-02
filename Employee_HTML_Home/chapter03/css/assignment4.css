@@ -39,16 +39,27 @@ article{
   left:410px;
 
 }
-article > div{
+article > #side{
   width: 170px;
   height: 370px;
   display: block;
   border: 1px solid black;
+  text-align: center;
 }
-article > div > img {
+article > #side > #name {
+  display: block;
+  text-align: left;
+}
+article > #side > img {
   background-image: cover;
   
 }
+article > #category1{
+  width: 170px;
+  height: 370px;
+  border: 1px solid black;
+}
+
 
 footer{
   width:100px;
@@ -57,4 +68,7 @@ footer{
 }
 footer > div{
   border: 1px solid black;
+}
+footer > #allwatch1 > #allwatch2{
+  background-color: greenyellow;
 }
