@@ -1,0 +1,33 @@
+body{
+  background-image: url('../images/golfer_bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header h1{
+  font-size: 48px;
+  color: #040740;
+  letter-spacing: 15px;
+}
+
+.smallTxt{
+  font-size: 13px;
+}
+
+.boldTxt{
+  font-size: bold;
+}
+
+.grayTxt{
+  color: gray;
+}
+
+.name{
+  font-size: 20px;
+}
+
+.logo{
+  width: 80px;
+  weight: 80px;
+}

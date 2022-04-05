@@ -1,0 +1,35 @@
+header > div > img{
+  width: 150px;
+  height: 150px;
+}
+
+nav > .checkNum{
+
+}
+
+
+section > label > img{
+  width: 300px;
+  height: 300px;
+}
+
+section > div > input{
+  background: skyblue;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+  
+}
+
+section > div {
+ position:absolute;
+ left: 33%;
+ 
+}
+
+footer > result{
+
+}
+
+footer > number{
+  
+}
