@@ -1,0 +1,87 @@
+header, main, footer{
+  max-width: 460px;
+}
+
+header{
+  margin-bottom: 10px;
+}
+header img{
+  height: 40px;
+}
+
+main{
+  margin-bottom: 10px;
+}
+
+#inputArea > div{
+  margin-bottom: 10px;
+}
+
+.someArea > div{
+  display: inline-block;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+#idImg, .pwImg, #nameImg, #telImg{
+  width: 14%;
+  padding: 1px;
+  background-color: lightgray;
+}
+#idInput, #pwInput, #pw2Input, #nameInput, #telInput{
+  width: 86%;
+  margin-left: -6px;
+}
+
+input[name=id], input[name=password1], input[name=password2], input[name=name], input[name=tel]{
+  width: 95%;
+  height: 40px;
+  padding-left: 10px;
+  border: none;
+}
+
+#idImg > img{
+  height: 24px;
+}
+
+.pwImg > img, #telImg > img {
+  height: 40px;
+}
+
+#nameImg > img{
+  height: 35px;
+}
+
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+}
+
+label[for="allAgree"]{
+  font-weight: bold;
+  font-size: 18px;
+}
+#checkInfo{
+  font-size: 14px;
+  padding-left: 34px;
+}
+
+#eachCheckArea{
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#eachCheckArea > label{
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: lighter;
+}
+#joinBtn{
+  width: 100%;
+  height: 40px;
+  background: #0074E9;
+  color: white;
+  border: none;
+  font-size: 20px;
+}

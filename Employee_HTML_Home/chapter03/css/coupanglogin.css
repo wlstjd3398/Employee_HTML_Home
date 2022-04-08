@@ -1,0 +1,72 @@
+header, main#loginArea, hr, section#joinBtnArea, footer{
+  max-width: 460px;
+  
+}
+
+header{
+  margin-bottom: 10px;
+}
+header img{
+  height: 40px;
+}
+
+#idArea{
+  margin-bottom: 10px;
+}
+#idArea > div, #pwArea > div{
+  display: inline-block;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+#idImg, #pwImg{
+  width: 14%;
+  padding: 1px;
+  background-color: lightgray;
+}
+#idInput, #pwInt{
+  width: 86%;
+  margin-left: -6px;
+}
+input[name=id], input[name=password]{
+  width: 95%;
+  height: 40px;
+  padding-left: 10px;
+  border: none;
+}
+
+#idImg > img{
+  height: 24px;
+}
+#pwImg > img{
+  height: 40px;
+}
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+}
+
+#findIdOrPw{
+  text-decoration: none;
+  color: #0075E9;
+}
+#loginBtn{
+  width: 100%;
+  height: 40px;
+  background: #0074E9;
+  color: white;
+  border: none;
+}
+
+hr{
+  margin-left: 0px;
+}
+
+#joinBtn{
+  width: 100%;
+  height: 40px;
+  background: #0074E9;
+  color: white;
+  border: 1px solid lightgray;
+}
+
+

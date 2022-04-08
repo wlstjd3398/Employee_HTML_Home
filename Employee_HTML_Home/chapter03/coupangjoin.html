@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠팡회원가입</title>
+  <link rel="stylesheet" href="./css/coupangjoin.css">
+</head>
+<body>
+  <header>
+    <img src="http://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png"  id="logo" alt="쿠팡로그인로고">
+  </header>
+  
+  <main>
+    <h4>회원정보를 입력해주세요</h4>
+  
+    <form action="join" method="post">
+      <section id="inputArea">
+        <div id="idArea" class="someArea">
+          <div id="idImg">
+            <img src="images/email.png" alt="이메일로고">
+          </div>
+          <div id="idInput">
+            <input type="email" name="id" placeholder="아이디(이메일)" required>
+          </div>
+        </div>
+        <div id="pw1Area" class="someArea">
+          <div class="pwImg">
+            <img src="images/lock.png" alt="비밀번호로고">
+          </div>
+          <div id="pw1Input">
+            <input type="password" name="password1" placeholder="비밀번호" required>
+          </div>
+        </div>
+        <div id="pw2Area" class="someArea">
+          <div class="pwImg">
+            <img src="images/lock.png" alt="비밀번호로고">
+          </div>
+          <div id="pw2Input">
+            <input type="password" name="password2" placeholder="비밀번호 확인" required>
+          </div>
+        </div>
+        <div id="nameArea" class="someArea">
+          <div id="nameImg">
+            <img src="images/person.png" alt="사람로고">
+          </div>
+          <div id="nameInput">
+            <input type="text" name="name" placeholder="이름">
+          </div>
+        </div>
+        <div id="telArea" class="someArea">
+          <div id="telImg">
+            <img src="images/phone.png" alt="폰로고">
+          </div>
+          <div id="telInput">
+            <input type="tel" name="tel" placeholder="휴대폰 번호">
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <h4>쿠팡 서비스약관에 동의해주세요</h4>
+
+        <section>
+          <input type="checkbox" id ="allAgree">
+          <label for="allAgree">모두 동의합니다.</label>
+        </section>
+
+        <p id="checkInfo">동의에는 필수 및 선택 목적(광고성 정보 수신 포함에 대한 동의가 포함되어 있으며, 선택 목적의 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.</p>
+
+        <section id="eachCheckArea">
+          <input type="checkbox" name="requered1"><label for="">[필수] 만 14세 이상입니다.</label><br>
+          <input type="checkbox" name="requered2"><label for="">[필수] 쿠팡 이용약관 동의</label><br>
+          <input type="checkbox" name="requered3"><label for="">[필수] 전자 금융거래 이용약관 동의</label><br>
+          <input type="checkbox" name="requered4"><label for="">[필수] 개인정보 수집 및 이용 동의</label><br>
+          <input type="checkbox" name="requered5"><label for="">[필수] 개인정보 제3자 제공 동의</label><br>
+          <input type="checkbox" name="requered6"><label for="">[선택] 마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의</label><br>
+          <input type="checkbox" name="requered6"><label for="">[선택] 광고성 정보 수신 동의</label><br>
+          <input type="checkbox" name="requered6"><label for="">[선택] 이메일 수신동의</label><br>
+          <input type="checkbox" name="requered6"><label for="">[선택] SMS, MMS 수신 동의</label><br>
+          <input type="checkbox" name="requered6"><label for="">[선택] 앱 푸시 수신 동의</label><br>
+        </section>
+      </section>
+      
+      <input type="submit" value="동의하고 가입하기" id="joinBtn">
+    </form>
+  </main>
+
+  <footer>
+    <p id="footerText">@Coupang Corp. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠팡로그인</title>
+  <link rel="stylesheet" href="./css/coupanglogin.css">
+</head>
+<body>
+  <header>
+    <img src="http://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png"  id="logo" alt="쿠팡로그인로고">
+  </header>
+
+  <main id="loginArea">
+    <form action="login" method="post">
+      <div id="idArea">
+        <div id="idImg">
+          <img src="./images/email.png" alt="이메일로고">
+        </div>
+        <div id="idInput">
+          <input type="emial" name="id" placeholder="아이디(이메일)" required>
+        </div>
+      </div>
+
+      <div id="pwArea">
+        <div id="pwImg">
+          <img src="./images/lock.png" alt="비밀번호로고">
+        </div>
+        <div id="pwInput">
+          <input type="password" name="password" placeholder="비밀번호" required>
+        </div>
+      </div>
+
+      <p>
+        <label for=""><input type="checkbox" name="autologin">자동로그인</label>
+        <a href="findIdOrPw" id="findIdOrPw">아이디(이메일)/비밀번호 찾기</a>
+      </p>
+
+      <button id="loginBtn" type="submit">로그인</button>
+    </form>
+  </main>
+
+  <hr>
+
+  <section id="joinBtnArea">
+    <button id="joinBtn">회원가입</button>
+  </section>
+
+  <footer>
+    <p id="footerText">@Coupang Corp. All rights reserved.</p>
+  </footer>
+
+
+
+
+</body>
+</html>
