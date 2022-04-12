@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+  // createElement(tagName)는 지정한 tagName을 html 요소로 만들어 반환
+  var url = document.createElement('a');
+
+  // Location 인데 url로 적은것은 URLUtils의 속성을 구현할수있다고 되어있음
+  url.href = 'https://developer.mozilla.org/ko/docs/Web/API/Location';
+  
+  console.log(url.href);
+  // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
+
+  console.log(url.protocol);  // https:
+  console.log(url.host);      // developer.mozilla.org:8080
+  console.log(url.hostname);  // developer.mozilla.org
+  console.log(url.port);      // 8080
+  console.log(url.pathname);  // /en-US/search
+  console.log(url.search);    // ?q=URL
+  console.log(url.hash);      // #search-results-close-container
+  console.log(url.origin);    // https://developer.mozilla.org:8080
+
+  location.reload; // 페이지 새로고침
+  // setInterval과 location.reload를 적용시켜 
+  // 네이버메일 1초에 한번 새로고침시켜놨음을 볼수있음
+
+  </script>
+</body>
+</html>

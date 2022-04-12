@@ -1,0 +1,37 @@
+.catplace1 > img{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 50px;
+
+}
+.catplace2 > img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  }
+
+.catverycute{
+  position: absolute;
+  top: 300px;
+  left: 50px;
+}
+#cattext{
+  border: 1px solid gray;
+  overflow: scroll;
+  width:120px;
+  height:100px;
+}
+
+nav{
+  position: absolute;
+  top: 500px;
+  left: 50px;
+}
+.catcute{
+  visibility: hidden;
+
+}
+
