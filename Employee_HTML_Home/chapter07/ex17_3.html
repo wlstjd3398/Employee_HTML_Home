@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin: 3px;
+      width: 50px;
+      position: absolute;
+      height: 50px;
+      left: 10px;
+      top: 30px;
+      background-color: yellow;
+    }
+    div.red {
+      background-color: red;
+    }
+    </style>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+   
+  <button>Start</button>
+  <div></div>
+   
+  <script>
+  $("button").click(function() {
+    $("div")
+      .animate({ left: '+=200px' }, 2000 )
+      .animate({ top: '0px' }, 600 )
+      .queue(function() {
+        $( this ).toggleClass( "red" );
+        $.dequeue( this );
+        // dequeue를 여기서 생략하면 이후 애니메이션 동작안됨
+      })
+      .animate({ left:'10px', top:'30px' }, 700 );
+  });
+  </script>
+
+  
+
+
+</body>
+</html>

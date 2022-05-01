@@ -8,13 +8,18 @@
   <link rel="stylesheet" href="css/golf.css">
 </head>
 <body>
-  <header>
+  <header id="golf_header">
     <h1>GOLF</h1>
-    <section>
-      <span class="smallTxt boldTxt grayTxt">GOLFER</span>
-      <span class="name boldTxt">Sang Hyun, Yoon</span>
-    </section>
+    <h2>html()</h2>
+    <p>내용</p>
+    <p><button type="button" onclick="getTag()">html태그 가져오기</button></p>
+    <p><button type="button" onclick="setTag()">명함뒷면 설정하기</button></p>
   </header>
+
+  <section>
+    <span class="smallTxt boldTxt grayTxt">GOLFER</span>
+    <span class="name boldTxt">Sang Hyun, Yoon</span>
+  </section>
   <hr>
   <footer>
     <p class="smallTxt boldTxt grayTxt">서울시 강남구 압구정동 112-12 한양빌딩 3F</p>
@@ -35,9 +40,29 @@
       <span class="boldTxt">depotterr@daum.net</span>
     </p>
     <p>
-      <img class="logo" src="images/golf.png" alt="">
+      <img class="logo" src="images/golf.png" alt="골프공 사진">
     </p>
   </footer>
   
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+
+    <script>
+      function getTag(){
+        let $golf_header = $("#golf_header");
+        let htmlTag = $("golf_header").html();
+
+        console.log("<< sec_1 내 태그 >>");
+        console.log(htmlTag);
+      }
+
+      function setTag(){
+        let $golf_header = $("#golf_header");
+        $golf_header.html("<a href=\"./assignment1.html\">명함뒷면</a>");
+      }
+      
+    </script>
+
+
 </body>
 </html>

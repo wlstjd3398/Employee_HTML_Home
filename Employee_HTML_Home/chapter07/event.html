@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .click_event{
+      width: 100px;
+      height: 100px;
+      border: solid 1px;
+      background: orange;
+    }
+    .mouseover_event{
+      width: 100px;
+      height: 100px;
+      border: solid 1px;
+      background: orange;
+    }
+    .mousedown_event{
+      width: 100px;
+      height: 100px;
+      border: solid 1px;
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+  
+  <button type="button" class="button1">click</button>
+  <button type="button" class="button2">mouseover</button>
+  <button type="button" class="button3">mousedown</button>
+
+  <div>
+    <div class="click_event">click event</div>
+    <br>
+    <div class="mouseover_event">mouseover event</div>
+    <br>
+    <div class="mousedown_event">mousedown event</div>
+  </div>
+
+<script src="../JS/jquery-3.6.0.min.js"></script>
+<script>
+  $(".button1").on("click", function(){
+    $(".click_event").css({"background": "red"})
+  });
+  $(".button2").on("mouseover", function(){
+    $(".mouseover_event").css({"background": "blue"})
+  });
+  $(".button3").on("mousedown", function(){
+    $(".mousedown_event").css({"background": "green"})
+  });
+
+
+  $(".click_event").on("click", function(){
+    $(".click_event").css({"background": "orange"})
+  });
+  $(".mouseover_event").on("mouseover", function(){
+    $(".mouseover_event").css({"background": "orange"})
+  });
+  $(".mousedown_event").on("mousedown", function(){
+    $(".mousedown_event").css({"background": "orange"})
+  });
+</script>
+
+</body>
+</html>

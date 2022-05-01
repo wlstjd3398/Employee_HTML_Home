@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg{
+      width:100px;
+      height:100px;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    
+    <button type="button" class="toggle">toggle()</button>
+  
+    <button type="button" class="fadeOut">fadeOut()</button>
+    <button type="button" class="fadeIn">fadeIn()</button>
+
+    <button type="button" class="slideUp">slideUp()</button>
+    <button type="button" class="slideDown">slideDown()</button>
+
+    <button type="button" class="fadeToggle">fadeToggle()</button>
+    <button type="button" class="fadeTo">fadeTo()</button>
+    
+  </div>
+
+  <div class="bg"></div>
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+
+
+    $(".toggle").on("click",function() {
+      $(".bg").toggle();
+    });
+
+
+    $(".fadeOut").on("click", function() {
+      $(".bg").fadeOut();
+    });
+    $(".fadeIn").on("click", function() {
+      $(".bg").fadeIn();
+    });
+
+
+    $(".slideUp").on("click", function( ){
+      $(".bg").slideUp();
+    });
+    $(".slideDown").on("click", function() {
+      $(".bg").slideDown();
+    });
+
+
+    $(".fadeToggle").on("click", function() {
+      $(".bg").fadeToggle();
+    });
+
+    $(".fadeTo").on("click", function() {
+      $(".bg").fadeTo(1000, 0.5);
+    });
+
+  </script>

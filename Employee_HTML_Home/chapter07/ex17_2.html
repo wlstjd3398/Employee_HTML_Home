@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg1{
+      width:100px;
+      height:100px;
+      background: red
+      ;
+    }
+    .bg2{
+      width:100px;
+      height:100px;
+      background: green;
+    }
+    .bg3{
+      width:100px;
+      height:100px;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    
+    <button type="button" class="delay">delay()</button>
+
+
+    <button type="button" class="start">start()</button>
+    <button type="button" class="stop">stop()</button>
+    
+
+    <button type="button" class="finish">finish()</button>
+  
+
+    <button type="button" class="queue_color">queue_color()</button>
+  </div>
+
+  <div class="bg1"></div>
+  <div class="bg2"></div>
+  <div class="bg3"></div>
+
+
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+  <script>
+
+    $(".delay").on("click", function(){
+      $(".bg1").slideUp(100).fadeIn(300);
+      $(".bg2").slideUp(100).delay(600).fadeIn(300);
+      $(".bg3").slideUp(100).delay(900).fadeIn(300);
+    });
+
+
+    $(".start").on("click", function(){
+      $(".bg1").animate({width: 300, height: 300}, 3000);
+    });
+    $(".stop").on("click", function(){
+      $(".bg1").stop();
+    });
+
+
+    $(".start").on("click", function(){
+      $(".bg1").animate({width: 300, height: 300}, 3000);
+    });
+    $(".finish").on("click", function(){
+      $(".bg1").finish();
+    });
+
+
+    $(".queue_color").on("click", function(){
+      $(".bg1").animate({color: orange},3000);
+      $(".bg2").animate({color: lightgreen}, 3000);
+      $(".queue_color").queue(function(){
+        $(".bg3").animate({color: skyblue}, 3000);
+        $(".queue_color").queue();
+      });
+      
+      
+    });
+
+  </script>

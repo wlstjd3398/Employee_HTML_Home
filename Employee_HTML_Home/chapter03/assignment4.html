@@ -8,21 +8,38 @@
   <link rel="stylesheet" href="css/assignment4.css">
 </head>
 <body>
+  <script src="../JS/jquery-3.6.0.min.js"></script>
+
+  <script>
+    
+    function moveTag(buttonType){
+      if(buttonType==1){
+        location.href="https://blog.naver.com/p_rain";
+      }else if(buttonType==2){
+        location.href="http://section.blog.naver.com/BlogHome.naver";
+      }else if(buttonType==3){
+        location.href="https://admin.blog.naver.com/wlstjd3398";
+      }else if(buttonType==4){
+        location.href="https://nid.naver.com/user2/help/naverProfile?m=viewModifyProfile&token_help=NlRMbeveBUTc7zp2";
+      }
+    }
+
+  </script>
 
   <form action="naverMyBlog.html">
     <header>
       <div id="top-bar1">
         <span>
-          <a href="" name="otherBlog">이웃블로그</a>
+        <button type="button" onclick="moveTag(1)">이웃블로그</button>
         </span>
         <span>
-          <a href="" name="blogHome">블로그 홈</a>
+          <button type="button" onclick="moveTag(2)">블로그 홈</button>
         </span>
         <span>
-          <a href="" name="myMenu">내 메뉴</a>
+          <button type="button" onclick="moveTag(3)">내 메뉴</button>
         </span>
         <span>
-          <a href="" name="mynick">자신의 별명</a>
+          <button type="button" onclick="moveTag(4)">자신의 별명</button>
         </span>
         <input type="button" name="allMenu">
       </div>

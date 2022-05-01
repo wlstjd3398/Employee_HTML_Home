@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="calendar">
+        <div id="top">
+            <div id="leftArrowBtn"><img src="images/left_arrow.png" alt=""></div>
+            <div id="thisMonth">2022년 04월</div>
+            <div id="rightArrowBtn"><img src="images/right_arrow.png" alt=""></div>
+        </div>
+        <div id="first_week">
+            <span class="prev">27</span>
+            <span class="prev">28</span>
+            <span class="prev">29</span>
+            <span class="prev">30</span>
+            <span class="prev">31</span>
+            <span></span>
+            <span class="sat"></span>
+        </div>
+        <div id="second_week">
+            <span class="sun"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sat"></span>
+        </div>
+        <div id="third_week">
+            <span class="sun"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sat"></span>
+        </div>
+        <div id="fourth_week">
+            <span class="sun"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sat"></span>
+        </div>
+        <div id="fifth_week">
+            <span class="sun"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="sat"></span>
+        </div>
+        <div id="sixth_week" class="hide">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        let nowDateInfo = new Date();
+
+        printCalendar();
+
+        // 첫째 주 보여주기
+        function printFirstWeek() {
+            nowDateInfo.setDate(1);
+
+            // 이 달의 1일의 요일
+            let day = nowDateInfo.getDay();
+            let $nthWeek;
+            let $nthDay;
+            let nthDate = 1;
+
+            $nthWeek = $("#first_week span");
+
+            for(let nthDay=day; nthDay<7; nthDay++) {
+                $nthDay = $nthWeek.eq(nthDay);
+                $nthDay.text(nthDate);
+
+                nthDate++;
+            }
+
+            return nthDate;
+        }
+        
+        function printNthWeek(nthWeekID, nthDate, lastDate) {
+            let $nthWeek = $("#" + nthWeekID + " span");
+            let $nthDay;
+
+            for(let nthDay=0; nthDay<7; nthDay++) {
+                $nthDay = $nthWeek.eq(nthDay);
+                $nthDay.text(nthDate);
+
+                nthDate++;
+                if(nthDate > lastDate) {
+                    nthDate = 1;
+                }
+            }
+
+            return nthDate;
+        }
+
+        function getLastDate() {
+            let nowYear = nowDateInfo.getFullYear();
+            let nowMonth = nowDateInfo.getMonth();
+
+            if(nowMonth == 11) {
+                nowYear++;
+                nowMonth = -1;
+            }
+
+            nowDateInfo.setFullYear(nowYear);
+            nowDateInfo.setMonth(nowMonth + 1);
+            nowDateInfo.setDate(1);
+
+            let time = nowDateInfo.getTime() - 86400000;
+            nowDateInfo.setTime(time);
+
+            return nowDateInfo.getDate();
+        }
+    
+        function getLastWeekID(lastDate) {
+            let lastWeekId;
+
+            let $fifthWeeks = $("#fifth_week span");
+            for(let i=0; i<7; i++) {
+                let $nthDate = $fifthWeeks.eq(i);
+                let nthDate = $nthDate.text();
+
+                if(nthDate == lastDate) {
+                    lastWeekId = "fifth_week";
+                    break;
+                }
+            }
+
+            let $sixthWeeks = $("#sixth_week span");
+            for(let i=0; i<7; i++) {
+                let $nthDate = $sixthWeeks.eq(i);
+                let nthDate = $nthDate.text();
+
+                if(nthDate == lastDate) {
+                    lastWeekId = "sixth_week";
+                    break;
+                }
+            }
+
+            return lastWeekId;
+        }
+    
+        // 달력 보여주는 함수
+        function printCalendar() {
+            // 첫째 주 보여주기 및 첫째 주의 마지막 날 다음 날짜를 변수에 저장
+            let theFirstDayOfTheSecondWeek = printFirstWeek();
+            let nthDate = theFirstDayOfTheSecondWeek;
+
+            let lastDate = getLastDate();
+            let lastWeek = 5;
+
+            // 둘째 주부터 다섯째 주까지 보여주기 시작
+            let weekIDArray = ["second_week", "third_week", "fourth_week", "fifth_week", "sixth_week"];
+
+            for(let count=0; count<weekIDArray.length; count++) {
+                let nthWeekID = weekIDArray[count];
+
+                nthDate = printNthWeek(nthWeekID, nthDate, lastDate);
+            }
+            // 둘째 주부터 다섯째 주까지 보여주기 종료
+
+            let lastWeekId = getLastWeekID(lastDate);
+            if(lastWeekId == "sixth_week") {
+                $("#sixth_week").css("display", "block");
+            }
+        }
+    </script>
+</body>
+</html>
